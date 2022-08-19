@@ -664,7 +664,7 @@ old = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən 
                #     continue
                # await asyncio.sleep(flood_time)
            # except Exception:
-                pass
+             #   pass
        # try:
           #  await message.reply_text(
                # f"**Mesajı yayımlayın {susr} İstifadəçilər.**"
