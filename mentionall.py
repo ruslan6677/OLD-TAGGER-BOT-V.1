@@ -35,10 +35,10 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+  await event.reply("**🤖Salam...💭,**\nMənim Adım [𝕆 𝕃 𝔻  Tag Bot](http://t.me/oldtaggerbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
                
-		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/oldtaggerbot?startgroup=a')],
                       [Button.url('Söhbət Qurupu', 'https://t.me/oldchatresmi')],
                       [Button.url('Kanal📢', 'https://t.me/oldresmiold')],
 		      [Button.url('🎉 Sahib', 'https://t.me/oldteamabasof'),
