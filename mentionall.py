@@ -39,28 +39,28 @@ async def start(event):
                     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-                      [Button.url('Qurup🛠', 'https://t.me/oldchatresmi')],
+                      [Button.url('Söhbət Qurupu', 'https://t.me/oldchatresmi')],
                       [Button.url('Kanal📢', 'https://t.me/oldresmiold')],
 		      [Button.url('🎉 Sahib', 'https://t.me/oldteamabasof'),
                       Button.url(' SAHİB BLOG', 'https://t.me/oldteamabasoff')],
-                      #[Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
-                      #[Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
+                      [Button.url('ᴼ ᴸ ᴰ BOTS','http://t.me/oldbotsold')],
+                      [Button.url('LORD GAME','http://t.me/lorddgame_bot?startgroup=a')],
                      ),
                     link_preview=False
                    )
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "** [𝕆𝕃𝔻 TAGFER](http://t.me/oldtagger)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /old <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
+  helptext = "** [𝕆𝕃𝔻 TAGFER](http://t.me/oldtagger)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /old <səbəb> - old Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/oldtaggerBot?startgroup=a')],
-                      #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
-                     # [Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
+                      [Button.url('Söhbət Qurupu', 'https://t.me/oldchatresmi')],
+                      [Button.url('Kanal📢', 'https://t.me/oldresmiold')],
 		      [Button.url('🎉 Sahib', 'https://t.me/oldteamabasof'),
                       Button.url(' BLOG', 'https://t.me/oldteamabasoff')],
-                     # [Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
-                    #  [Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
+                      [Button.url('ᴼ ᴸ ᴰ BOTS','http://t.me/oldbotsold')],
+                      [Button.url('LORD GAME','http://t.me/lorddgame_bot?startgroup=a')],
                     ),
                     link_preview=False
                    )
