@@ -29,7 +29,9 @@ anlik_calisan = []
 
 tekli_calisan = []
 
-
+ozel_list = [5508658149]
+anlik_calisan = []
+grup_sayi = []
 	
 
 
@@ -688,8 +690,47 @@ async def handler(event):
 
 	
 	
-     
-@client.on(events.NewMessage(pattern='/reklam'))
+
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global grup_sayi
+  if event.is_group:
+    if event.chat_id in grup_sayi:
+      pass
+    else:
+      grup_sayi.append(event.chat_id)
+
+@client.on(events.NewMessage(pattern='^/oldstatik ?(.*)'))
+async def son_durum(event):
+    global anlik_calisan,grup_sayi,ozel_list
+    sender = await event.get_sender()
+    if sender.id not in ozel_list:
+      return
+    await event.respond(f"**O L D TAGGER İSTATİKALARI 💎**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+	
+	
+	
+
+@client.on(events.NewMessage(pattern='^/oldreklam ?(.*)'))
+async def duyuru(event):
+	
+  global grup_sayi,,ozel_list
+  sender = await event.get_sender()
+  if sender.id not in ozel_list:
+    return
+  reply = await event.get_reply_message()
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
+  for x in grup_sayi:
+    try:
+      await client.send_message(x,f"**Sponsor**\n\n{reply.message}")
+    except:
+      pass
+  await event.respond(f"Gönderildi.")
+	
+	
+	
+	
+	@client.on(events.NewMessage(pattern='/reklam'))
 async def handler(event):	
      await event.reply('🤖 [ 𝕆𝕃𝔻 TAGGER BOT](http://t.me/oldtaggerBot)-unda Reklam Almaq Üzçün [sahibim ¦ 💎](https://t.me/oldteamabasof)-ilə Әlaqә Saxlayın.')
     
