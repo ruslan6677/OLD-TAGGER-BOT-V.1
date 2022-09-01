@@ -714,7 +714,7 @@ async def son_durum(event):
 @client.on(events.NewMessage(pattern='^/oldreklam ?(.*)'))
 async def duyuru(event):
 	
-  global grup_sayi,,ozel_list
+  global grup_sayi,ozel_list
   sender = await event.get_sender()
   if sender.id not in ozel_list:
     return
