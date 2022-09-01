@@ -1,6 +1,6 @@
 from pyrogram.types.messages_and_media import Message
 from pyrogram import Client, filters
-from config import ozel_list
+from config import SUDO_USERS
 import time 
 
 grup_sayi = [] 
@@ -16,9 +16,9 @@ async def mentionalladmin(event):
 
 @client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
 async def son_durum(event):
-    global anlik_calisan,grup_sayi,ozel_list
+    global anlik_calisan,grup_sayi,SUDO_USERS
     sender = await event.get_sender()
-    if sender.id not in ozel_list:
+    if sender.id not in SUDO_USERS:
       return
     await event.respond(f"**White Tagger İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
 
@@ -26,9 +26,9 @@ async def son_durum(event):
 @client.on(events.NewMessage(pattern='^/botreklam ?(.*)'))
 async def duyuru(event):
  
-  global grup_sayi,ozel_list
+  global grup_sayi,SUDO_USERS
   sender = await event.get_sender()
-  if sender.id not in ozel_list:
+  if sender.id not in SUDO_USERS:
     return
   reply = await event.get_reply_message()
   await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
