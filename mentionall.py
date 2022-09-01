@@ -730,7 +730,7 @@ async def duyuru(event):
 	
 	
 	
-	@client.on(events.NewMessage(pattern='/reklam'))
+@client.on(events.NewMessage(pattern='/reklam'))
 async def handler(event):	
      await event.reply('🤖 [ 𝕆𝕃𝔻 TAGGER BOT](http://t.me/oldtaggerBot)-unda Reklam Almaq Üzçün [sahibim ¦ 💎](https://t.me/oldteamabasof)-ilə Әlaqә Saxlayın.')
     
