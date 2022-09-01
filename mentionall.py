@@ -700,7 +700,7 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@client.on(events.NewMessage(pattern='^/oldstatik ?(.*)'))
+@client.on(events.NewMessage(pattern='^/statik ?(.*)'))
 async def son_durum(event):
     global anlik_calisan,grup_sayi,ozel_list
     sender = await event.get_sender()
@@ -711,7 +711,7 @@ async def son_durum(event):
 	
 	
 
-@client.on(events.NewMessage(pattern='^/oldreklam ?(.*)'))
+@client.on(events.NewMessage(pattern='^/broadcast ?(.*)'))
 async def duyuru(event):
 	
   global grup_sayi,ozel_list
