@@ -681,12 +681,12 @@ old = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən 
 
 
 
-@client.on(events.NewMessage(pattern='/old'))
+@client.on(events.NewMessage(pattern='/olive'))
 async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sən mənə sahib deyilsən!__")
-    await event.reply('**Bot İşləyir Narahat olmayın** \n https://t.me/oldteamabasof \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯')
+    await event.reply('**Bot Online Narahat Olmayın** \n @oldteamabasof')
 
 	
 	
@@ -700,13 +700,16 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@client.on(events.NewMessage(pattern='^/statik ?(.*)'))
+@client.on(events.NewMessage(pattern='^/stats ?(.*),))
 async def son_durum(event):
-    global anlik_calisan,grup_sayi,ozel_list
+    # Bot Stats
+    if str(event.sender_id) not in SUDO_USERS:
+        return await event.reply("Hey!**\n __Sən sudo isdifsdəci deyildən. Botun Statikaların Öyrənəmərsən.!__")
+    global anlik_calisan,grup_sayi,özel_list
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**O L D TAGGER İSTATİKALARI 💎**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+    await event.respond(f"**{BOT_USERNAME} Statikaları ⚛**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlıq Aktiv Grup: `{len(anlik_calisan)}`")
 	
 	
 	
