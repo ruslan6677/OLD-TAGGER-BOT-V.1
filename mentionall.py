@@ -453,7 +453,7 @@ async def mentionall (event):
     return await event.respond("**Bu əmir qruplar üçün etibarlıdır!**")
 			       
 admins = []
-async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
    admins.append(admin.id)
 if not event.sender_id in admins:
   return await event.respond("**Bu əmirdən yalnız idarəçilər isdifadə edə bilər! **")
