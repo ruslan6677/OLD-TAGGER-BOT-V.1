@@ -471,7 +471,7 @@ elif event.reply_to_msg_id:
 elif event.pattern_match.group(1) and event.reply_to_msg_id:
   return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
 else:
-  return await event.respond("**Tag'a başlaq üçün səbəb yazın...!**)
+  return await event.respond("**Tag'a başlaq üçün səbəb yazın...!**")
 
 if mode == "text_on_cmd":
   anlik_calisan.append(event.chat_id)
