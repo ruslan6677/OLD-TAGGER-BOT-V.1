@@ -700,7 +700,7 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@client.on(events.NewMessage(pattern='^/stats ?(.*),))
+@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
 async def son_durum(event):
     # Bot Stats
     if str(event.sender_id) not in SUDO_USERS:
