@@ -505,11 +505,6 @@ if mode == "text_on_reply":
       usrnum = 0
       usrtxt = ""
 			     
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
-  global anlik_calisan
-  anlik_calisan.remove(event.chat_id)
-			     
 			     
 @client.on(events.NewMessage(pattern="^/admins ?(.*)"))
 async def tag_admin(event):
