@@ -709,7 +709,7 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**{BOT_USERNAME} Statikaları ⚛**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlıq Aktiv Grup: `{len(anlik_calisan)}`")
+    await event.respond(f"**O L D TAGGER BOT Statikaları ⚛**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlıq Aktiv Grup: `{len(anlik_calisan)}`")
 	
 	
 	
