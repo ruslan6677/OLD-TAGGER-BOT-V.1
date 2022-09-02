@@ -750,7 +750,7 @@ old = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən 
 
 
 
-@client.on(events.NewMessage(pattern='/oldsahib'))
+@client.on(events.NewMessage(pattern='/old'))
 async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
