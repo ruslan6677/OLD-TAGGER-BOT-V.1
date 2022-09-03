@@ -767,11 +767,8 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
+@client.on(events.NewMessage(pattern='^/statik ?(.*)'))
 async def son_durum(event):
-    # Bot Stats
-    if str(event.sender_id) not in SUDO_USERS:
-        return await event.reply("Hey!**\n __Sən sudo isdifsdəci deyildən. Botun Statikaların Öyrənəmərsən.!__")
     global anlik_calisan,grup_sayi,özel_list
     sender = await event.get_sender()
     if sender.id not in ozel_list:
