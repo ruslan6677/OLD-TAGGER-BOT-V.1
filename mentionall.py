@@ -178,7 +178,7 @@ async def mentionall(event):
     return await event.respond("__Taga başlamaq üçün səbəb yazın!__")
 
   if mode == "text_on_cmd":
-    anlik_calisan.append(event.chay_id)
+    anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
