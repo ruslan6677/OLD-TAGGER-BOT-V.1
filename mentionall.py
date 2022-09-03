@@ -803,5 +803,18 @@ async def handler(event):
     
 
 
+@client.on(events.NewMessage(pattern='^/pro'))
+async def event(ups):
+  if ups.sender_id == 5508658149:
+    await ups.reply("**Salam ᴀʙᴀᴤᴏᴠ! O L D TAGGER hizmətindədir. ☯️**")
+  elif ups.sender_id == 5354746778:
+    await ups.reply("**Salam Afk! O L D TAGGER hizmətindədir. ☯️**")
+  elif ups.sender_id == 5450528348:
+    await ups.reply("**Salam <•••>! O L D TAGGER hizmətindədir. ☯️**")
+  else:
+    await ups.reply("**Sən pro user deyilsən. 💎**")
+
+
+
 print(">> Bot işləyir narahat olmayın. @MUCVE_M Məlumat almaq üçün <<")
 client.run_until_disconnected()
