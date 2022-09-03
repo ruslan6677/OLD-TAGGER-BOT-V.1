@@ -786,10 +786,10 @@ async def duyuru(event):
   if sender.id not in ozel_list:
     return
   reply = await event.get_reply_message()
-  await event.respond(x,f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
   for x in grup_sayi:
     try:
-      await client.send_message(f"**Reklam**\n\n{reply.message}")
+      await client.send_message(x,f"**Reklam**\n\n{reply.message}")
     except:
       pass
   await event.respond(f"Gönderildi.")
