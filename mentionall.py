@@ -132,7 +132,7 @@ async def mentionall(event):
     anlik_calisan.append(event.chat_id)
 
     usrnum = 0
-    usrtxt = "'
+    usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{random.choice(renk)}](tg://user?id={usr.id}) "
