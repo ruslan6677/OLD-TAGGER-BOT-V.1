@@ -33,10 +33,10 @@ ozel_list = [5508658149,5354746778]
 anlik_calisan = []
 grup_sayi = []
 	
-(https://telegra.ph/file/cce7cc0f861e755ab775e.jpg)
+
 
 @client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
+async def start(event): photo=f"{IMG_1}"
   await event.reply("**🤖Salam...💭,**\nMənim Adım [𝕆 𝕃 𝔻  Tag Bot](http://t.me/oldtaggerbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
                
