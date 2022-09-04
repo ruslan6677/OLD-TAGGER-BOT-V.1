@@ -38,8 +38,7 @@ grup_sayi = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event): 
   await event.reply("**🤖Salam...💭,**\nMənim Adım [𝕆 𝕃 𝔻  Tag Bot](http://t.me/oldtaggerbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
-  await event.photo
-      photo=f"{IMG_1}",
+  await event.reply("**photo=f"{IMG_1}***,
 		     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/oldtaggerbot?startgroup=a')],
