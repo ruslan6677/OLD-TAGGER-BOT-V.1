@@ -139,7 +139,7 @@ async def mentionall(event):
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
-      if event.chat_id no in anlik_calisan:
+      if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
