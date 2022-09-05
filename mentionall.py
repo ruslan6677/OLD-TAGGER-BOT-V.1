@@ -86,6 +86,73 @@ emoji = "😀 🐵 🍓 😃 🦁 🍒 😄 🐯 🍎 😁 🐱 🍉 😆 🐶 �
   
 renk = "🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪ " .split(" ")
 
+urek = "❤️ 🧡 💛 💚 💙 💜 🖤 💘 💝 ❤️   🧡 💛 💚 💙 💜 🖤 💘 💝".split(" ")
+
+
+
+@client.on(events.NewMessage(pattern="^/utag ?(.*)"))
+async def mentionall(event):
+  global anlik_calisan
+  if event.is_private:
+    return await event.respond("**Bu əmr qruplar üçün etibarlıdı!**")
+
+  admins = []
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond("**Bu əmirdən yalnız idarəçilər isdifadə edə bilər!**")
+
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("**Əvvəlki mesajlara cavab verə bilərəm! **")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+   return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+  else:
+   return await event.respond("**Tag'a başlamaq üçün səbəb yazın...!**")
+
+  if mode == "text_on_cmd":
+    anlik_calisan.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    async for user in client.iter_participants(event.chat.id):
+      usrnum += 1
+      usrtxt += f"[{random.choice(urek)}](tg://user?id={user.id) "
+      if event.chat_id not in anlik_calisan:
+        await event.respond("**Tag əməliyyatı uğurla dayandırılıdı!**")
+        return
+      if usrnum = 5:
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+
+  if mode == "text_on_reply":
+    anlik_calisan.append(event.chat_id)
+
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
+      if event.chat_id no in anlik_calisan:
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+
+
+@client.on(events.NewMesage(pattern='^(?i)/cancel'))
+async def mentionall(event):
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
 
 
 @client.on(events.NewMessage(pattern="^/rtag ?(.*)"))
@@ -93,7 +160,6 @@ async def mentionall(event):
   global anlik_calisan
   if event.is_private:
     return await event.respond("**Bu əmr qruplar üçün etibarlıdı!**")
-
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
