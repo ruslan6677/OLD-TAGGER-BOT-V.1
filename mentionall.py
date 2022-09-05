@@ -131,22 +131,22 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-   if mode == "text_on_reply":
-     anlik_calisan.append(event.chat_id)
+  if mode == "text_on_reply":
+    anlik_calisan.append(event.chat_id)
 
-     usrnum = 0
-     usrtxt = ""
-     async for usr in client.iter_participants(event.chat_id):
-       usrnum += 1
-       usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
-       if event.chat_id no in anlik_calisan:
-         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
-         return
-       if usrnum == 5:
-         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
-         await asyncio.sleep(2)
-         usrnum = 0
-         usrtxt = ""
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
+      if event.chat_id no in anlik_calisan:
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
 
 
 @client.on(events.NewMesage(pattern='^(?i)/cancel'))
