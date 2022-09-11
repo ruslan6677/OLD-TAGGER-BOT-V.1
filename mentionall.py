@@ -95,7 +95,7 @@ futbol = ['Maldonado', 'Lionel Messi', 'Bobô', 'Matías Delgado', 'Márcio Nobr
 @client.on(events.NewMessage(pattern="^/futag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan 
-  if event.is_private
+  if event.is_private:
     return await event.respond("**Bu əmir qruplar üçün etibarlıdı!**")
 
   admins = []
