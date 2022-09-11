@@ -104,7 +104,7 @@ async def mentionall(event):
   if not event.sender_id in admins:
     return await event.respond("**Bu Əmirdən yalnız idarəçilər isdifadə edə bilər!**")
 
-  if event.pattern_match.group(1)
+  if event.pattern_match.group(1):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(1)
   elif event.reply_to_msg_id:
