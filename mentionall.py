@@ -97,7 +97,7 @@ sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev
 @client.on(events.NewMessage(pattern="^/stag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
-  if event.is_private
+  if event.is_private:
     return await event.respond("**Bu əmir qruplar üçün etibarlıdı**")
     
   admins = []
