@@ -951,7 +951,7 @@ async def event(ups):
     
 @client.on_message(filters.command("stats") & filters.user(OWNER_ID))
 async def botstats(bot: Client, message: Message):
-    g4rip = await bot.send_message(message.chat.id, Zəhmət olmasa gözləyin, bilgiləri gətirirəm!.format(message.from_user.mention))
+    g4rip = await bot.send_message(message.chat.id,  LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
     groups = 0
     pms = 0
@@ -976,6 +976,15 @@ async def botstats(bot: Client, message: Message):
 @Client.on_message()
 async def G4RIP(bot: Client, cmd: Message):
     await handle_user_status(bot, cmd)
+    
+
+########### ÇOKLU DİL ##############
+class LAN(object):
+
+    if LANGAUGE == "AZ":
+        
+        
+      STATS_STARTED = "{} **Zəhmət olmasa gözləyin, bilgiləri gətirirəm!**"
 
 
 
