@@ -94,7 +94,7 @@ sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev
 
 
 
-@client.on(events.NewMessage(pattern="^/stag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/sehid ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
