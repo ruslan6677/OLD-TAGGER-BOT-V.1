@@ -42,6 +42,26 @@
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
       "value": "1980683964"
+    },
+    "DATABASE_URL": {
+      "description": "mongo url",
+      "value": ""
+    },
+    "LOG_CHANNEL": {
+      "description": "chanel id",
+      "value": ""
+    },
+    "GROUP_SUPPORT": {
+      "description": "support",
+      "value": ""
+    },
+    "GONDERME_TURU": {
+      "description": "False yap",
+      "value": ""
+    },
+    "LANGAUGE": {
+      "description": "DİL KODU",
+      "value": "AZ"
     }
   },
   "buildpacks": [{
