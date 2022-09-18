@@ -949,7 +949,7 @@ async def event(ups):
     await ups.reply("**Sən pro user deyilsən. 💎**")
     
     
-    @client.on_message(filters.command("stats") & filters.user(OWNER_ID))
+@client.on_message(filters.command("stats") & filters.user(OWNER_ID))
 async def botstats(bot: Client, message: Message):
     g4rip = await bot.send_message(message.chat.id, Zəhmət olmasa gözləyin, bilgiləri gətirirəm!.format(message.from_user.mention))
     all_users = await db.get_all_users()
