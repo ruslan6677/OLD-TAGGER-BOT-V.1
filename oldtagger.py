@@ -39,7 +39,7 @@ grup_sayi = []
 async def start(event):
     await event.send_file(event.chat_id, 'logo.jpg',)
     caption="🤖Salam...💭,\nMənim Adım 𝕆 𝕃 𝔻  Tag Bot (http://t.me/oldtaggerbot)-u.\nQurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.",
-        buttons=(
+      buttons=(
                
         [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/oldtaggerbot?startgroup=a')],
                       [Button.url('Söhbət Qurupu', 'https://t.me/oldchatresmi')],
