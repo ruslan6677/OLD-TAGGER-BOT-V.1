@@ -32,6 +32,7 @@ tekli_calisan = []
 ozel_list = [5508658149,5354746778]
 anlik_calisan = []
 grup_sayi = []
+rxyzdev_tagTot = {}
 	
 
 
@@ -78,7 +79,9 @@ async def help(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
+  
 
 # emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 🐮 🐷 🐽 🐗 🦓 🦄 🐴 🐸 🐲 🦎 🐉 🦖 🦕 🐢 🐊 🐍 🐁 🐀 🐇 🐈 🐩 🐕 🦮 🐕‍🦺 🐅 🐆 🐎 🐖 🐄 🐂 🐃 🐏 🐑 🐐 🦌 🦙 🦥 🦘 🐘 🦏 🦛 🦒 🐒 🦍 🦧 🐪 🐫 🐿️ 🦨 🦡 🦔 🦦 🦇 🐓 🐔 🐣 🐤 🐥 🐦 🦉 🦅 🦜 🕊️ 🦢 🦩 🦚 🦃 🦆 🐧🦈 🐬 🐋 🐳 🐟 🐠 🐡 🦐 🦞 🦀 🦑 🐙 🦪 🦂 🕷️ 🦋 🐞 🐝 🦟 🦗 🐜 🐌 🐚 🕸️ 🐛 🐾 😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 😍 🤩 🥳 🤗 🙃 🙂 ☺️ 😊 😏 😌 😉 🤭 😶 😐 😑 😔 😋 😛 😝 😜 🤪 🤔 🤨 🧐 🙄 😒 😤 😠 🤬 ☹️ 🙁 😕 😟 🥺 😳 😬 🤐 🤫 😰 😨 😧 😦 😮 😯 😲 😱 🤯 😢 😥 😓 😞 😖 😣 😩 😫 🤤 🥱 😴 😪 🌛 🌜 🌚 🌝 🌞 🤢 🤮 🤧 🤒 🍓 🍒 🍎 🍉 🍑 🍊 🥭 🍍 🍌 🌶 🍇 🥝 🍐 🍏 🍈 🍋 🍄 🥕 🍠 🧅 🌽 🥦 🥒 🥬 🥑 🥯 🥖 🥐 🍞 🥜 🌰 🥔 🧄 🍆 🧇 🥞 🥚 🧀 🥓 🥩 🍗 🍖 🥙 🌯 🌮 🍕 🍟 🥨 🥪 🌭 🍔 🧆 🥘 🍝 🥫 🥣 🥗 🍲 🍛 🍜 🍢 🥟 🍱 🍚 🥡 🍤 🍣 🦞 🦪 🍘 🍡 🥠 🥮 🍧 🍧 
 
@@ -169,6 +172,8 @@ async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
   
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
+  
   
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def mentionall(event):
@@ -233,6 +238,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/mtag ?(.*)"))
@@ -298,6 +305,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/seher ?(.*)"))
@@ -363,6 +372,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/btag ?(.*)"))
@@ -428,6 +439,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
         
         
 @client.on(events.NewMessage(pattern="^/sehid ?(.*)"))
@@ -493,6 +506,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
         
         
 
@@ -559,6 +574,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
@@ -624,6 +641,8 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/rtag ?(.*)"))
@@ -688,6 +707,8 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 	
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
@@ -754,6 +775,8 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
@@ -819,6 +842,8 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 
 @client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
@@ -884,6 +909,8 @@ async def mentionall(event):
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 
 stag = (
@@ -1169,6 +1196,8 @@ async def tag_admin(event):
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
+  
+  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 	
 @client.on(events.NewMessage(pattern="^/old ?(.*)"))
