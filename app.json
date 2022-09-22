@@ -1,39 +1,39 @@
 {
-  "name": "Telegram Mention TaggerBot",
-  "logo":"https://telegra.ph/file/dfa517fd00b6ca5f7ac9.jpg",
-  "description": "User tagger bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
+  "name": "Telegram O L D  TaggerBot",
+  "logo":"https://te.legra.ph/file/f6348a83229bf5a46e811.jpg",
+  "description": "Old tagger bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
   "env": {
     "BOT_TOKEN": {
       "description": "bot token girin.",
-      "value": "57898Ta0ysiY"
+      "value": "5740066159:AAFFvQW5B6f2mZ7XIdB4ar86LWdp7qkQogc"
     },
     "API_ID": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
-      "value": "3444"
+      "value": "15954332"
     },
     "API_HASH": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
-      "value": "8ce53849cd4d2fa108eb151b255"
+      "value": "85adea6f1eaf068b707703b4846a9ced"
     },
     "BOT_NAME": {
       "description": "botun adını girin.",
-      "value": "bebe"
+      "value": "O L D TAGGER 🇦🇿 V1.2.0"
     },
     "BOT_USERNAME": {
       "description": "botun adresini girin.",
-      "value": "bebe"
+      "value": "oldtaggerbot"
     },
     "BOT_ID": {
       "description": "botun id'sini girin.",
-      "value": "5789800986"
+      "value": "5740066159"
     },
     "SUDO_USERS": {
       "description": "botun sahibini girin.",
-      "value": "1280040987"
+      "value": "5508658149"
     },
     "SUPPORT_CHAT": {
       "description": "botun destek grubunu girin.",
-      "value": "bebe"
+      "value": "oldsupport"
     },
     "OWNER_ID": {
       "description": "botun sahibinin id'sini girin.",
@@ -41,27 +41,7 @@
     },
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
-      "value": "1980683964"
-    },
-    "DATABASE_URL": {
-      "description": "mongo url",
-      "value": ""
-    },
-    "LOG_CHANNEL": {
-      "description": "chanel id",
-      "value": ""
-    },
-    "GROUP_SUPPORT": {
-      "description": "support",
-      "value": ""
-    },
-    "GONDERME_TURU": {
-      "description": "False yap",
-      "value": ""
-    },
-    "LANGAUGE": {
-      "description": "DİL KODU",
-      "value": "AZ"
+      "value": "oldteamabasof"
     }
   },
   "buildpacks": [{
