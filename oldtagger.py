@@ -1356,7 +1356,7 @@ async def event(ups):
 
 @client.on(events.NewMessage(pattern='/sahib'))
 async def handler(event):	
-     await event.reply('🇦🇿 sahiblər**\n**[sahibim ¦ 💎](https://t.me/oldteamabasof)**\n**[sahib ¦ 2](https://t.me/oldteamabasof).')
+     await event.reply('🇦🇿 sahiblər**\n**@OLDTEAMABASOF**\n**@TTOWNERTT.')
      
      
      
