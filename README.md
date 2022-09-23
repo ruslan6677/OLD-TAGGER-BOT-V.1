@@ -19,3 +19,8 @@ Bot - @oldtaggerBot
  H E R O K U   D E P L O Y ⏳
  
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Teamabasof/OLD-TAGGER-BOT-V.1.git)
+
+
+#OWNER
+
+<a href="https://t.me/oldteamabasof"><img src="https://img.shields.io/badge/SAHİB-blue.svg?style=for-the-badge&logo=Telegram"></a> <a 
