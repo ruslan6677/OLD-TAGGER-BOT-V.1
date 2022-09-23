@@ -19,7 +19,7 @@ REPONU İZİN ALMADAN ÇALAN ORUSPUEVLADI DI
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Teamabasof/OLD-TAGGER-BOT-V.1.git)
 
 
-#OWNER
+# O W N E R
 
 <a href="https://t.me/oldteamabasof"><img src="https://img.shields.io/badge/O W N E R-blue.svg?style=for-the-badge&logo=Telegram"></a>
 
