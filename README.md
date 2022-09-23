@@ -1,8 +1,10 @@
 # O L D TAGGER BOT
 
 
-REPONU İCAZƏSİZ GÖTÜRƏN PEYSƏR Dİ 
-REPONU İZİN ALMADAN ÇALAN ORUSPUEVLADI DI
+# REPONU İCAZƏSİZ GÖTÜRƏN PEYSƏR Dİ 
+
+
+# REPONU İZİN ALMADAN ÇALAN ORUSPUEVLADI DI
 
 
 
@@ -14,7 +16,7 @@ REPONU İZİN ALMADAN ÇALAN ORUSPUEVLADI DI
 
 
 
- H E R O K U   D E P L O Y ⏳
+# H E R O K U   D E P L O Y ⏳
  
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Teamabasof/OLD-TAGGER-BOT-V.1.git)
 
