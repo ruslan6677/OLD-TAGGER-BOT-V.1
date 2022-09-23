@@ -51,9 +51,6 @@ async def start(event):
                      ),
                     link_preview=False
                    )
-                   
- if event.is_group:
-    return await client.send_message(event.chat_id, "**Məni qrupuna əlavə etdiyin üçün Təşəkkürlər ✨**")
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
