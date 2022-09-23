@@ -53,6 +53,9 @@ async def start(event):
                      ),
                     link_preview=False
                    )
+                   
+ if event.is_group:
+    return await client.send_message(event.chat_id, f"**Məni qrupuna əlavə etdiyin üçün Təşəkkürlər ✨**")
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
@@ -401,7 +404,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(bayrag)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı**"")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
