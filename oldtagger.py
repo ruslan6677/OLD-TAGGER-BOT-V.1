@@ -416,7 +416,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(bayrag)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı**"")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
