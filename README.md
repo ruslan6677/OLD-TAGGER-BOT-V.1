@@ -23,4 +23,4 @@ Bot - @oldtaggerBot
 
 #OWNER
 
-<a href="https://t.me/oldteamabasof"><img src="https://img.shields.io/badge/SAHİB-blue.svg?style=for-the-badge&logo=Telegram"></a> <a 
+<a href="https://t.me/oldteamabasof"><img src="https://img.shields.io/badge/O W N E R-blue.svg?style=for-the-badge&logo=Telegram"></a>
