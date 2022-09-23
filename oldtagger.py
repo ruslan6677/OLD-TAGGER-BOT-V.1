@@ -56,7 +56,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "** [𝕆𝕃𝔻 TAGGER](http://t.me/oldtaggerbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /sehid <səbəb> - Şəhid adı ilə tag edir.**\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /old <səbəb> - old Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /rtag - Rənglə tag edir**\n**🤖➪ /utag - ürəklə tag edir**\n**🤖➪ /futag - Futbolçu adları ilə tag edir**\n**🤖➪ /mtag <səbəb> - Mafia rolları ilə tag edir**\n**🤖➪ /atag <səbəb> - Maraqlı adla tag edir**\n**🤖➪ /seher <səbəb> - Şəhər adları ilə tag edir**\n**🤖➪ /btag <səbəb> - Bayrag ilətagedir**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
+  helptext = "** [𝕆𝕃𝔻 TAGGER](http://t.me/oldtaggerbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /sehid <səbəb> - Şəhid adı ilə tag edir.**\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /old <səbəb> - old Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /rtag - Rənglə tag edir**\n**🤖➪ /utag - ürəklə tag edir**\n**🤖➪ /futag - Futbolçu adları ilə tag edir**\n**🤖➪ /mtag <səbəb> - Mafia rolları ilə tag edir**\n**🤖➪ /atag <səbəb> - Maraqlı adla tag edir**\n**🤖➪ /seher <səbəb> - Şəhər adları ilə tag edir**\n**🤖➪ /btag <səbəb> - Bayrag ilətagedir**\n**🤖➪ /fdtag <səbəb> - federasiya adları ilə tag edit**\n**🤖➪ /sahib - Botun sahiblərinin siyahısını gətirir**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/oldtaggerBot?startgroup=a')],
@@ -81,7 +81,6 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
   
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
   
 
 # emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 🐮 🐷 🐽 🐗 🦓 🦄 🐴 🐸 🐲 🦎 🐉 🦖 🦕 🐢 🐊 🐍 🐁 🐀 🐇 🐈 🐩 🐕 🦮 🐕‍🦺 🐅 🐆 🐎 🐖 🐄 🐂 🐃 🐏 🐑 🐐 🦌 🦙 🦥 🦘 🐘 🦏 🦛 🦒 🐒 🦍 🦧 🐪 🐫 🐿️ 🦨 🦡 🦔 🦦 🦇 🐓 🐔 🐣 🐤 🐥 🐦 🦉 🦅 🦜 🕊️ 🦢 🦩 🦚 🦃 🦆 🐧🦈 🐬 🐋 🐳 🐟 🐠 🐡 🦐 🦞 🦀 🦑 🐙 🦪 🦂 🕷️ 🦋 🐞 🐝 🦟 🦗 🐜 🐌 🐚 🕸️ 🐛 🐾 😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 😍 🤩 🥳 🤗 🙃 🙂 ☺️ 😊 😏 😌 😉 🤭 😶 😐 😑 😔 😋 😛 😝 😜 🤪 🤔 🤨 🧐 🙄 😒 😤 😠 🤬 ☹️ 🙁 😕 😟 🥺 😳 😬 🤐 🤫 😰 😨 😧 😦 😮 😯 😲 😱 🤯 😢 😥 😓 😞 😖 😣 😩 😫 🤤 🥱 😴 😪 🌛 🌜 🌚 🌝 🌞 🤢 🤮 🤧 🤒 🍓 🍒 🍎 🍉 🍑 🍊 🥭 🍍 🍌 🌶 🍇 🥝 🍐 🍏 🍈 🍋 🍄 🥕 🍠 🧅 🌽 🥦 🥒 🥬 🥑 🥯 🥖 🥐 🍞 🥜 🌰 🥔 🧄 🍆 🧇 🥞 🥚 🧀 🥓 🥩 🍗 🍖 🥙 🌯 🌮 🍕 🍟 🥨 🥪 🌭 🍔 🧆 🥘 🍝 🥫 🥣 🥗 🍲 🍛 🍜 🍢 🥟 🍱 🍚 🥡 🍤 🍣 🦞 🦪 🍘 🍡 🥠 🥮 🍧 🍧 
@@ -142,7 +141,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(fedler)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -159,7 +158,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(fedler)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -172,8 +171,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
   
   
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
@@ -209,7 +206,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(ad)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -226,7 +223,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(ad)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -239,8 +236,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/mtag ?(.*)"))
@@ -276,7 +271,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(mafia)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -293,7 +288,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(mafia)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -306,8 +301,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/seher ?(.*)"))
@@ -343,7 +336,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(seherler)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -360,7 +353,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(seherler)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -373,8 +366,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/btag ?(.*)"))
@@ -410,7 +401,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(bayrag)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**"")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -427,7 +418,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(bayrag)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**"")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -440,8 +431,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
         
         
 @client.on(events.NewMessage(pattern="^/sehid ?(.*)"))
@@ -477,7 +466,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(sehidler)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -494,7 +483,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(sehidler)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -507,8 +496,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
         
         
 
@@ -545,7 +532,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(futbol)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -562,7 +549,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choic(futbol)}](tg://user?id={user_id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -575,8 +562,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan 
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
@@ -612,7 +597,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(urek)}](tg://user?id={user.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond(f"**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -629,7 +614,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond(f"**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -642,8 +627,6 @@ async def mentionall(event):
 async def mentionall(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/rtag ?(.*)"))
@@ -678,7 +661,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(renk)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"** ✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -695,7 +678,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(renk)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -708,8 +691,6 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 	
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
@@ -745,7 +726,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"** ✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -763,7 +744,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond(f"**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -776,8 +757,6 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
@@ -813,7 +792,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"✰ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -831,7 +810,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"✰ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -843,8 +822,6 @@ async def mentionall(event):
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 
 @client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
@@ -880,7 +857,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**✰ - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -898,7 +875,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"✰ - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -910,8 +887,6 @@ async def mentionall(event):
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 	
 
 stag = (
@@ -1050,7 +1025,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -1068,7 +1043,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -1197,9 +1172,6 @@ async def tag_admin(event):
 async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
-  
-  
-  if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}")
 
 	
 @client.on(events.NewMessage(pattern="^/old ?(.*)"))
@@ -1237,7 +1209,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(old)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -1255,7 +1227,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(old)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond(f"**✅ Tag prosesi başarıyla dayandırılıdı.**\n\n**👥 Tag edilən Kişi Sayısı:** {rxyzdev_tagTot[event.chat_id]}\n**🗣 Tag prosesini Başlatan:** {rxyzdev_initT}")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
