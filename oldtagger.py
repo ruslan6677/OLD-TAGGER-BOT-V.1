@@ -32,8 +32,6 @@ tekli_calisan = []
 ozel_list = [5508658149,5354746778]
 anlik_calisan = []
 grup_sayi = []
-rxyzdev_tagTot = {}
-rxyzdev_initT = {}
 	
 
 
@@ -55,7 +53,7 @@ async def start(event):
                    )
                    
  if event.is_group:
-    return await client.send_message(event.chat_id, f"**Məni qrupuna əlavə etdiyin üçün Təşəkkürlər ✨**")
+    return await client.send_message(event.chat_id, "**Məni qrupuna əlavə etdiyin üçün Təşəkkürlər ✨**")
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
