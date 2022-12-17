@@ -5,7 +5,7 @@
   "env": {
     "BOT_TOKEN": {
       "description": "bot token girin.",
-      "value": "5740066159:AAFFvQW5B6f2mZ7XIdB4ar86LWdp7qkQogc"
+      "value": "5740066159:AAH6bGkKO34_81_8WkoWTeQn07orOvyDSQw"
     },
     "API_ID": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
@@ -17,7 +17,7 @@
     },
     "BOT_NAME": {
       "description": "botun adını girin.",
-      "value": "O L D TAGGER 🇦🇿 V1.2.0"
+      "value": "OLD TAGGER"
     },
     "BOT_USERNAME": {
       "description": "botun adresini girin.",
@@ -41,7 +41,7 @@
     },
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
-      "value": "oldteamabasof"
+      "value": "SatisAzOwner"
     }
   },
   "buildpacks": [{
