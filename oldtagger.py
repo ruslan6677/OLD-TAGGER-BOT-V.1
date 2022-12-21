@@ -29,7 +29,7 @@ anlik_calisan = []
 
 tekli_calisan = []
 
-ozel_list = [5508658149,5354746778]
+ozel_list = [5508658149,2124305832]
 anlik_calisan = []
 grup_sayi = []
 	
@@ -37,12 +37,12 @@ grup_sayi = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🤖Salam...💭,\n**Mənim Adım [𝕆 𝕃 𝔻  Tag Bot](http://t.me/oldtaggerbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+  await event.reply("**🤖Salam...💭,\n**Mənim Adım [𝕆 𝕃 𝔻  Tag Bot](http://t.me/TaggerLuciBot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
 		   
 		    buttons=(
                
-		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/oldtaggerbot?startgroup=a')],
-                      [Button.url('Söhbət Qurupu', 'https://t.me/oldchatresmi')],
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/TaggerLuciBot?startgroup=a')],
+                      [Button.url('Söhbət Qurupu', 'https://t.me/TheBorzsohbet')],
                       [Button.url('Kanal📢', 'https://t.me/oldresmiold')],
 		      [Button.url('🎉 Sahib', 'https://t.me/oldteamabasof'),
                       Button.url(' SAHİB BLOG', 'https://t.me/oldteamabasoff')],
@@ -102,7 +102,7 @@ mafia = "👨‍🌾Vətəndaş 👨‍✈️Komissar Kattani 👨‍💼Çavuş
 
 ad = ( "🐰 Dovşan","🦁 Şir","💍 Evli","🐶 İT","🐻 Ayı","🐭 Siçan","🥰 Sevimli","😜 Subay","😎Sevgili","👨‍👩‍👦‍👦 Ailə","🤑 Varlı","🕵‍♂ Vəkil","🐒 Meymun","🐣 Cücə","🦊 Tülkü","👩‍⚕ Həkim","👨‍🏫 Müəllim","👨‍🍳 Aşbaz","👩‍🏫 Müəllimə","🧚‍♀ Mələk","😊 Dəyərli","Gözəl💄","Çirkin😒","Unutqan 🤕","🦠 Karona","🤭 Dəcəl","😡 Lovğa","🙈Utancaq","😎 Səbirli","🧑‍🔬 Ağıllı")
 
-fedler = "LC","DTÖ","GOLD","XAOS","KARONA","FC","ASO","STFU","KARABAKH","TTK","GGT","TAO","DEV","FM","DAB","BQB","ATOM","ELİT","BTO","CRAZY","BTB","ALPHA","FELLİX","QANUN","RCI","SO","XTQ","BT","DTB","KİNG","HOST","AMON","DTX","TAD","KOBRA".split(" ")
+fedler = "BTB","DTÖ","GOLD","XAOS","KARONA","FC","ASO","STFU","KARABAKH","TTK","GGT","TAO","DEV","FM","DAB","BQB","ATOM","ELİT","BTO","CRAZY","BTB","ALPHA","FELLİX","QANUN","RCI","SO","XTQ","BT","DTB","KİNG","HOST","AMON","DTX","TAD","KOBRA".split(" ")
 
 
 
@@ -1338,13 +1338,13 @@ async def duyuru(event):
 	
 @client.on(events.NewMessage(pattern='/reklam'))
 async def handler(event):	
-     await event.reply('🤖 [ 𝕆𝕃𝔻 TAGGER BOT](http://t.me/oldtaggerBot)-unda Reklam Almaq Üzçün [sahibim ¦ 💎](https://t.me/oldteamabasof)-ilə Әlaqә Saxlayın.')
+     await event.reply('🤖 [LUCI TAGGER ](http://t.me/TaggerLuciBot)-unda Reklam Almaq Üzçün [sahibim ¦ 💎](https://t.me/ORDAYAM_5_DEQIQEYE)-ilə Әlaqә Saxlayın.')
     
 
 
 @client.on(events.NewMessage(pattern='^/pro'))
 async def event(ups):
-  if ups.sender_id == 5508658149:
+  if ups.sender_id == 2124305832:
     await ups.reply("**Salam ᴀʙᴀᴤᴏᴠ! O L D TAGGER hizmətindədir. ☯️**")
   elif ups.sender_id == 5354746778:
     await ups.reply("**Salam Afk! O L D TAGGER hizmətindədir. ☯️**")
@@ -1357,7 +1357,7 @@ async def event(ups):
 
 @client.on(events.NewMessage(pattern='/sahib'))
 async def handler(event):	
-     await event.reply('🇦🇿 sahiblər**\n**@OLDTEAMABASOF**\n**@TTOWNERTT.')
+     await event.reply('🇦🇿 sahiblər**\n**@ordayam_5_deqiqeye**\n**@TTOWNERTT.')
      
      
      
