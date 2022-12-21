@@ -4,14 +4,14 @@ import os
 class Config():
     # Get these values from my.telegram.org
     # https://my.telegram.org
-    API_ID = int(os.environ.get("API_ID",17568815))
-    API_HASH = os.environ.get("API_HASH", "177622d39f23e7c3d015f3d6ebaacd31")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5740066159:AAHIkaBc1Nz2K3vbwf8KQy-u0ASUcHQhI0A")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "oldtaggerbot")
-    BOT_NAME = os.environ.get("BOT_NAME", "OLD TAGGER")
-    BOT_ID = int(os.environ.get("BOT_ID",5740066159))
-    SUDO_USERS = os.environ.get("SUDO_USERS", "AnonyumAz").split()
+    API_ID = int(os.environ.get("API_ID", 10300036))
+    API_HASH = os.environ.get("API_HASH", "79c295e05c970ddd724f0762ba275104")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5806469241:AAFpSXKzFOQqk0jjb0nE4hIFmvSbAyh01jY")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "TaggerLuciBot")
+    BOT_NAME = os.environ.get("BOT_NAME", "TaggerBot")
+    BOT_ID = int(os.environ.get("BOT_ID",5806469241))
+    SUDO_USERS = os.environ.get("SUDO_USERS", "ordayam_5_deqiqeye").split()
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "oldsupport")
-    OWNER_ID = int(os.environ.get("OWNER_ID",5508658149))
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "SatisAzOwner")
+    OWNER_ID = int(os.environ.get("OWNER_ID",2124305832))
+    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "ordayam_5_deqiqeye")
     IMG_1 = os.environ.get("IMG_1", "https://telegra.ph/file/cce7cc0f861e755ab775e.jpg")
