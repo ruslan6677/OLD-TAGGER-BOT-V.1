@@ -12,6 +12,39 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
+ozel_list = [2124305832]
+anlik_calisan = []
+grup_sayi = []
+
+Husu_tag = []
+
+Huseyn_H = {}  
+  
+
+
+
+
+
+
+####ElectroTaggerBot Stat
+
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global grup_sayi
+  if event.is_group:
+    if event.chat_id in grup_sayi:
+      pass
+    else
+      grup_sayi.append(event.chat_id)
+
+@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
+async def son_durum(event):
+    global anlik_calisan,grup_sayi,ozel_list
+    sender = await event.get_sender()
+    if sender.id not in ozel_list:
+      return
+    await event.respond(f"Bot Güncellendi✅\nElectro Güncel Verileri 🖥️\n\nToplam Grub: {len(grup_sayi)}\n\nAnlık Çalışan Grub
+
 api_id = Config.API_ID
 api_hash = Config.API_HASH
 bot_token = Config.BOT_TOKEN
@@ -1358,6 +1391,43 @@ async def event(ups):
 @client.on(events.NewMessage(pattern='/sahib'))
 async def handler(event):	
      await event.reply('🇦🇿 sahiblər**\n**@ordayam_5_deqiqeye**\n**@TTOWNERTT.')
+
+
+####ElectroTaggerBot Stat
+
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global grup_sayi
+  if event.is_group:
+    if event.chat_id in grup_sayi:
+      pass
+    else:
+      grup_sayi.append(event.chat_id)
+
+@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
+async def son_durum(event):
+    global anlik_calisan,grup_sayi,ozel_list
+    sender = await event.get_sender()
+    if sender.id not in ozel_list:
+      return
+    await event.respond(f"Bot Güncellendi✅\nElectro Güncel Verileri 🖥️\n\nToplam Grub: {len(grup_sayi)}\n\nAnlık Çalışan Grub
+
+@client.on(events.NewMessage(pattern='^/broadcast ?(.*)'))
+async def duyuru(event):
+ 
+  global grup_sayi,ozel_list
+  sender = await event.get_sender()
+  if sender.id not in ozel_list:
+    return
+  reply = await event.get_reply_message()
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
+  for x in grup_sayi:
+    try:
+      await client.send_message(x,f"📣 Reklam\n\n{reply.message}")
+    except:
+      pass
+  await event.respond(f"Gönderildi.")
+
      
      
      
