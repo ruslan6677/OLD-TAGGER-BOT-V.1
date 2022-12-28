@@ -17,33 +17,8 @@ anlik_calisan = []
 grup_sayi = []
 
 Husu_tag = []
+Huseyn_H = []
 
-Huseyn_H = {}  
-  
-
-
-
-
-
-
-####ElectroTaggerBot Stat
-
-@client.on(events.NewMessage())
-async def mentionalladmin(event):
-  global grup_sayi
-  if event.is_group:
-    if event.chat_id in grup_sayi:
-      pass
-    else
-      grup_sayi.append(event.chat_id)
-
-@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
-async def son_durum(event):
-    global anlik_calisan,grup_sayi,ozel_list
-    sender = await event.get_sender()
-    if sender.id not in ozel_list:
-      return
-    await event.respond(f"Bot Güncellendi✅\nElectro Güncel Verileri 🖥️\n\nToplam Grub: {len(grup_sayi)}\n\nAnlık Çalışan Grub
 
 api_id = Config.API_ID
 api_hash = Config.API_HASH
