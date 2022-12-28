@@ -1385,7 +1385,7 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-  await event.respond(f"Bot Güncellendi✅\nElectro Güncel Verileri 🖥️\n\nToplam Grub: {len(grup_sayi)}\n\nAnlık Çalışan Grub
+    await event.respond(f"Bot Güncellendi✅\nElectro Güncel Verileri 🖥️\n\nToplam Grub: {len(grup_sayi)}\n\nAnlık Çalışan Grub
 
 @client.on(events.NewMessage(pattern='^/broadcast ?(.*)'))
 async def duyuru(event):
