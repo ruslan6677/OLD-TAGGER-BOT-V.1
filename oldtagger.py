@@ -1418,7 +1418,10 @@ async def duyuru(event):
 
 @Client.on_message(filters.command("song") & ~filters.edited)
 def song(_, message):
-    query = " ".join(message.command[1:])
+    query = ''
+    for i in message.command[1:]:
+        query += ' ' + str(i)
+    print(query)
     m = message.reply("<b>Musiqi Axtarılır ... 🔍</b>")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
