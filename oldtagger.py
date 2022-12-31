@@ -5,6 +5,18 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
 from Config import Config
+import os, youtube_dl, requests, aiohttp, wget, time
+from config import Config
+from youtube_search import YoutubeSearch
+from pyrogram.handlers import MessageHandler
+from yt_dlp import YoutubeDL
+from pyrogram import Client, filters
+import yt_dlp
+from pyrogram.types import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    Message
+)
 
 logging.basicConfig(
     level=logging.INFO,
