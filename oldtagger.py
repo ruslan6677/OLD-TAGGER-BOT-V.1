@@ -6,6 +6,11 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
 from telethon.tl.types import InputMediaDice
 from Config import Config
+import inspect
+import glob
+import logging
+import sys
+import re
 import os, youtube_dl, requests, aiohttp, wget, time
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
