@@ -4,7 +4,6 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
-import register
 from pathlib import Path
 from telethon import events
 from telethon.tl.types import InputMediaDice
